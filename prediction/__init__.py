@@ -1,0 +1,1 @@
+from .drum_part_predictor import predict_drum_parts

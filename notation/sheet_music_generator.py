@@ -122,7 +122,8 @@ class SheetMusicGenerator:
             file.write(modified_content)
         
         subprocess.run(['lilypond', '-o', output_path, ly_path])
-        midi_path = os.path.join(tempfile.gettempdir(), f"{os.path.splitext(os.path.basename(ly_path))[0]}.midi")
+        extension = ".mid" if os.name == "nt" else ".midi"
+        midi_path = os.path.join(tempfile.gettempdir(), f"{os.path.splitext(os.path.basename(ly_path))[0]}{extension}")
 
         return midi_path
 

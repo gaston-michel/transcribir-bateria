@@ -11,6 +11,7 @@ def main():
     UIComponents.set_background()
 
     SessionState.initialize()
+    
     FileUploader.display()
 
     if SessionState.is_audio_uploaded():

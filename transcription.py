@@ -17,7 +17,6 @@ def transcribe():
 
     drum_parts = predict_drum_parts(audio, onsets)
     
-    sheet_music_files = SheetMusicGenerator.generate_sheet_music(onsets, drum_parts, aligned_beats)
+    SheetMusicGenerator.generate_sheet_music(onsets, drum_parts, aligned_beats)
 
-    print("Transcription completed successfully") 
-    return sheet_music_files
+    print("Transcription completed successfully")

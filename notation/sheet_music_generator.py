@@ -51,8 +51,6 @@ class RhythmAnalyzer:
         
 class LilyPondConverter:
     @staticmethod
-    # def add_silences(ly_drum_parts: List[str], musical_figures: List[int]) -> List[str]:
-    #     return [part if figure != 0 else 'r' for part, figure in zip(ly_drum_parts, musical_figures)]
     def add_silences(ly_drum_parts: List[str], musical_figures: List[int]) -> List[str]:
         for i in range(len(musical_figures)):
             if musical_figures[i] == 0:
